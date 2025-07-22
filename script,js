@@ -1,0 +1,13 @@
+const radar = document.getElementById('radar');
+const log = document.getElementById('log');
+
+function addThreat() {
+  const dot = document.createElement('div');
+  dot.className = 'dot';
+  dot.style.left = Math.random() * 480 + 'px';
+  dot.style.top = Math.random() * 480 + 'px';
+  radar.appendChild(dot);
+  log.innerHTML += '🚀 Threat detected<br>';
+}
+
+setInterval(addThreat, 3000);
